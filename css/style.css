@@ -1,0 +1,765 @@
+/* ========================================
+   Coastal Axis Insurance - Stylesheet
+   Colors derived from logo: Navy #1B3A5C, Gold #C8962E
+   ======================================== */
+
+:root {
+  --navy: #1B3A5C;
+  --navy-dark: #122840;
+  --navy-light: #2A5580;
+  --gold: #C8962E;
+  --gold-light: #D4A94E;
+  --gold-dark: #A67B24;
+  --white: #FFFFFF;
+  --off-white: #F7F8FA;
+  --light-gray: #E8ECF0;
+  --medium-gray: #8896A4;
+  --dark-gray: #3A4550;
+  --text: #2C3E50;
+  --shadow: 0 2px 12px rgba(27, 58, 92, 0.1);
+  --shadow-lg: 0 8px 30px rgba(27, 58, 92, 0.15);
+  --transition: 0.3s ease;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.8rem; font-weight: 700; }
+h2 { font-size: 2rem; font-weight: 600; }
+h3 { font-size: 1.4rem; font-weight: 600; }
+h4 { font-size: 1.1rem; font-weight: 600; }
+
+p { margin-bottom: 1rem; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Header / Nav ---- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  height: 75px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav a {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--gold);
+}
+
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: ' \25BE';
+  font-size: 0.75rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  border-radius: 6px;
+  min-width: 240px;
+  padding: 0.5rem 0;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: var(--off-white);
+  color: var(--gold);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  margin: 5px 0;
+  transition: var(--transition);
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  margin-top: 75px;
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: rgba(200, 150, 46, 0.08);
+}
+
+.hero h1 {
+  color: var(--white);
+  margin-bottom: 1.2rem;
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: none;
+  text-align: center;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.btn-gold:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(200, 150, 46, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btn-navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-navy:hover {
+  background: var(--navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(27, 58, 92, 0.4);
+}
+
+/* ---- Sections ---- */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--off-white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  color: var(--medium-gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-header .divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* ---- Cards Grid ---- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card .icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: var(--medium-gray);
+  font-size: 0.95rem;
+}
+
+.card .card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.card .card-link:hover {
+  color: var(--gold-dark);
+}
+
+/* ---- Value Props ---- */
+.value-props {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.value-prop {
+  padding: 2rem 1.5rem;
+}
+
+.value-prop .icon {
+  width: 64px;
+  height: 64px;
+  background: var(--off-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+
+.value-prop h3 {
+  margin-bottom: 0.5rem;
+}
+
+.value-prop p {
+  color: var(--medium-gray);
+  font-size: 0.95rem;
+}
+
+/* ---- CTA Banner ---- */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.cta-banner h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* ---- About Page ---- */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Insurance Detail Page ---- */
+.insurance-hero {
+  margin-top: 75px;
+  padding: 60px 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  text-align: center;
+}
+
+.insurance-hero h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.insurance-hero p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.insurance-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.insurance-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--gold);
+  transition: all var(--transition);
+}
+
+.insurance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.insurance-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.insurance-card p {
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ---- Contact Page ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-info h2 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-detail .icon {
+  width: 44px;
+  height: 44px;
+  background: var(--off-white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-detail span {
+  color: var(--dark-gray);
+}
+
+.contact-detail a {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.contact-detail a:hover {
+  color: var(--gold);
+}
+
+/* ---- Form ---- */
+.contact-form {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-form h3 {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text);
+  transition: border-color var(--transition);
+  background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(200, 150, 46, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--gold);
+}
+
+.form-submit {
+  margin-top: 1.5rem;
+}
+
+.form-submit .btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.05rem;
+}
+
+/* ---- Footer ---- */
+.footer {
+  background: var(--navy-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 50px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-brand img {
+  height: 45px;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-links a {
+  display: block;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ---- Page Header (for inner pages) ---- */
+.page-header {
+  margin-top: 75px;
+  padding: 60px 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .value-props {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+
+  .hero { padding: 60px 0 50px; }
+  .hero h1 { font-size: 2.2rem; }
+  .section { padding: 50px 0; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+  }
+
+  .nav-dropdown .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .nav-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insurance-types {
+    grid-template-columns: 1fr;
+  }
+}

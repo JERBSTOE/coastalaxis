@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Coastal Axis Insurance</title>
+  <meta name="description" content="Get a free insurance quote from Coastal Axis Insurance Agency. Contact us for personal or business insurance on California's Central Coast.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/coastal-axis.png" alt="Coastal Axis Insurance">
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="why-coastal-axis.html">Why Coastal Axis</a>
+        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <a href="personal-insurance.html">Personal Insurance</a>
+          <div class="dropdown-menu">
+            <a href="personal-insurance.html#auto">Auto Insurance</a>
+            <a href="personal-insurance.html#home">Homeowners Insurance</a>
+            <a href="personal-insurance.html#landlord">Landlord Policies</a>
+            <a href="personal-insurance.html#earthquake">Earthquake Insurance</a>
+            <a href="personal-insurance.html#flood">Flood Insurance</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="business-insurance.html">Business Insurance</a>
+          <div class="dropdown-menu">
+            <a href="business-insurance.html#workers-comp">Workers' Compensation</a>
+            <a href="business-insurance.html#general-liability">General Liability</a>
+            <a href="business-insurance.html#commercial-auto">Commercial Auto</a>
+            <a href="business-insurance.html#professional-liability">Professional Liability</a>
+          </div>
+        </div>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get a free, no-obligation quote. We'll respond within one business day.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <p>Whether you need a new policy, want to review your current coverage, or just have a question &mdash; we're here to help.</p>
+
+          <div class="contact-detail">
+            <div class="icon">&#9993;</div>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:jared@coastalaxis.com">jared@coastalaxis.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">&#127968;</div>
+            <div>
+              <strong>Service Area</strong><br>
+              <span>California's Central Coast</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding: 1.5rem; background: var(--off-white); border-radius: 10px; border-left: 4px solid var(--gold);">
+            <h4 style="margin-bottom: 0.5rem;">What to Expect</h4>
+            <p style="margin-bottom: 0; color: var(--dark-gray); font-size: 0.95rem;">Fill out the form and Jared will personally review your request and reach out within one business day. No call centers. No automated responses.</p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Request a Free Quote</h3>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display: none;">
+              <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMethod">Preferred Contact Method</label>
+              <select id="contactMethod" name="contactMethod">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="text">Text</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Insurance Type(s) of Interest</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="insurance[]" value="auto"> Auto</label>
+                <label><input type="checkbox" name="insurance[]" value="home"> Homeowners</label>
+                <label><input type="checkbox" name="insurance[]" value="landlord"> Landlord</label>
+                <label><input type="checkbox" name="insurance[]" value="earthquake"> Earthquake</label>
+                <label><input type="checkbox" name="insurance[]" value="flood"> Flood</label>
+                <label><input type="checkbox" name="insurance[]" value="workers-comp"> Workers' Comp</label>
+                <label><input type="checkbox" name="insurance[]" value="general-liability"> General Liability</label>
+                <label><input type="checkbox" name="insurance[]" value="commercial-auto"> Commercial Auto</label>
+                <label><input type="checkbox" name="insurance[]" value="professional-liability"> Professional Liability</label>
+                <label><input type="checkbox" name="insurance[]" value="umbrella"> Umbrella</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="currentProvider">Current Insurance Provider</label>
+              <input type="text" id="currentProvider" name="currentProvider">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Notes or Questions</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about what you're looking for..."></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-gold">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/coastal-axis.png" alt="Coastal Axis Insurance">
+          <p>Independent insurance agency serving California's Central Coast. One conversation. Multiple options. Better protection.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Insurance</h4>
+          <a href="personal-insurance.html">Personal Insurance</a>
+          <a href="business-insurance.html">Business Insurance</a>
+          <a href="contact.html">Get a Quote</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="why-coastal-axis.html">Why Coastal Axis</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Coastal Axis Insurance Agency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
