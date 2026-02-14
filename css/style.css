@@ -78,7 +78,7 @@ p { margin-bottom: 1rem; }
   background: var(--white);
   box-shadow: var(--shadow);
   z-index: 1000;
-  height: 100px;
+  height: 180px;
 }
 
 .header .container {
@@ -89,7 +89,7 @@ p { margin-bottom: 1rem; }
 }
 
 .logo img {
-  height: 75px;
+  height: 150px;
   width: auto;
 }
 
@@ -172,7 +172,7 @@ p { margin-bottom: 1rem; }
 
 /* ---- Hero Section ---- */
 .hero {
-  margin-top: 100px;
+  margin-top: 180px;
   padding: 100px 0 80px;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
@@ -422,7 +422,7 @@ p { margin-bottom: 1rem; }
 
 /* ---- Insurance Detail Page ---- */
 .insurance-hero {
-  margin-top: 100px;
+  margin-top: 180px;
   padding: 60px 0;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
@@ -660,7 +660,7 @@ p { margin-bottom: 1rem; }
 
 /* ---- Page Header (for inner pages) ---- */
 .page-header {
-  margin-top: 100px;
+  margin-top: 180px;
   padding: 60px 0;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
@@ -710,7 +710,7 @@ p { margin-bottom: 1rem; }
   .nav {
     display: none;
     position: absolute;
-    top: 100px;
+    top: 180px;
     left: 0;
     width: 100%;
     background: var(--white);
