@@ -1,50 +1,23 @@
-# How to Update Your Website with Gemini
+# How to Update Your Website
 
-Hi Jared! Your website is set up so you can manage it through **Google Gemini**, just like talking to a helpful assistant. You don't need to touch any code yourself.
-
----
-
-## One-Time Setup (Do this first)
-
-Before you start, tell Gemini it has permission to access your website files:
-
-1. Go to [gemini.google.com](https://gemini.google.com)
-2. Click the **Settings (Gear Icon)** at the bottom left, then **Extensions**
-3. Find **GitHub** in the list and switch the toggle to **ON**
-4. Follow the prompt to link your GitHub account
+Hi Jared! You can make simple text changes to your website directly on GitHub. For anything more complex (layout changes, new pages, design updates, etc.), reach out to Ryan for help.
 
 ---
 
-## How to Make Changes
+## Making Simple Text Changes
 
-Whenever you want to change something on your site, go to Gemini and use the `@GitHub` command.
+You can edit text directly on GitHub — no coding experience needed.
 
-**Examples you can type into Gemini:**
+1. Go to your repository at [github.com](https://github.com/JERBSTOE/coastalaxis)
+2. Click on the file you want to edit (see the page reference table below)
+3. Click the **pencil icon** (Edit this file) in the top right
+4. Find the text you want to change and update it
+5. Click the green **"Commit changes"** button
+6. Your website updates automatically within a couple of minutes!
 
-- `@GitHub look at my coastalaxis repo and change the main heading on index.html to "Protecting California Families & Businesses"`
-- `@GitHub update the contact email in contact.html to my-new-email@coastalaxis.com`
-- `@GitHub add a new paragraph to the About section in about.html that mentions my 15 years of experience`
-- `@GitHub change the hero text on index.html to say "Your Trusted Insurance Partner on the Central Coast"`
+**Good for:** Changing headings, updating paragraphs, fixing typos, updating your phone number or email.
 
----
-
-## How to Make Changes Go Live
-
-After you ask Gemini for a change, it will create a **Pull Request** (a suggested change).
-
-1. Gemini will give you a link to the Pull Request on GitHub
-2. Click that link
-3. Click the green **"Merge Pull Request"** button, then **"Confirm Merge"**
-4. Your website updates automatically within a couple of minutes!
-
----
-
-## Tips
-
-- **Be Specific:** Instead of "fix the top," say "change the header color to light blue" or "update the homepage heading to say XYZ"
-- **Reference the File:** Mention which page you want changed (index.html = homepage, about.html = about page, contact.html = contact page, etc.)
-- **Ask for Advice:** You can ask `@GitHub does my homepage text sound professional? What should I improve?`
-- **Undo Changes:** If something looks wrong, tell Gemini: `@GitHub I didn't like that last change, please undo it`
+**Ask Ryan for help with:** Adding new pages, changing the layout or design, updating images, adding new features, or anything you're unsure about.
 
 ---
 
@@ -63,4 +36,4 @@ After you ask Gemini for a change, it will create a **Pull Request** (a suggeste
 
 ## Need Help?
 
-If something goes wrong or you're not sure what to do, just ask Gemini: `@GitHub something broke on my website, can you help me figure out what happened?`
+For anything beyond simple text edits, contact Ryan and he'll take care of it.
