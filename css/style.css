@@ -444,8 +444,14 @@ p { margin-bottom: 1rem; }
 
 .insurance-types {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.insurance-types .insurance-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .insurance-card {
@@ -761,5 +767,9 @@ p { margin-bottom: 1rem; }
 
   .insurance-types {
     grid-template-columns: 1fr;
+  }
+
+  .insurance-types .insurance-card:last-child:nth-child(odd) {
+    max-width: 100%;
   }
 }
