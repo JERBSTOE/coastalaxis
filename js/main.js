@@ -42,7 +42,7 @@ if (contactForm) {
       headers: { 'Accept': 'application/json' }
     }).then(function(response) {
       if (response.ok) {
-        contactForm.innerHTML = '<div style="text-align:center; padding: 2rem 0;"><h3 style="color: var(--navy); margin-bottom: 0.5rem;">Thank You!</h3><p style="color: var(--dark-gray);">Your request has been submitted. Jared will be in touch within one business day.</p></div>';
+        contactForm.innerHTML = '<div style="text-align:center; padding: 2rem 0;"><h3 style="color: var(--navy); margin-bottom: 0.5rem;">Thank You!</h3><p style="color: var(--dark-gray);">Your request has been submitted. Jared will personally review your request and reach out within a timely manner.</p></div>';
       } else {
         btn.disabled = false;
         btn.textContent = 'Submit Request';
