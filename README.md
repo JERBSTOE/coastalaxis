@@ -28,8 +28,7 @@ You can edit text directly on GitHub — no coding experience needed.
 | Homepage | `index.html` | Main landing page with hero and insurance overview |
 | Why Coastal Axis | `why-coastal-axis.html` | Independent vs captive, your value proposition |
 | About | `about.html` | Your bio and experience |
-| Personal Insurance | `personal-insurance.html` | Auto, Home, Landlord, Earthquake, Flood |
-| Business Insurance | `business-insurance.html` | Workers' Comp, General Liability, Commercial Auto, Professional Liability |
+| Insurance | `insurance.html` | All insurance types: Auto, Home, Landlord, Earthquake, Flood, Workers' Comp, General Liability, Commercial Auto, Professional Liability |
 | Contact | `contact.html` | Contact form (sends to jared@coastalaxis.com) |
 
 ---

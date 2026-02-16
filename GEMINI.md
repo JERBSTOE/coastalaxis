@@ -4,8 +4,7 @@ This is a website for Coastal Axis Insurance Agency, owned by Jared. The site is
 - `index.html` - Homepage (hero section, value props, insurance overview)
 - `why-coastal-axis.html` - Why choose Coastal Axis (independent vs captive messaging)
 - `about.html` - About Jared (bio, experience, background)
-- `personal-insurance.html` - Personal insurance types (Auto, Home, Landlord, Earthquake, Flood)
-- `business-insurance.html` - Business insurance types (Workers' Comp, General Liability, Commercial Auto, Professional Liability)
+- `insurance.html` - All insurance types (Auto, Home, Landlord, Earthquake, Flood, Workers' Comp, General Liability, Commercial Auto, Professional Liability)
 - `contact.html` - Contact form (powered by Formspree, sends to jared@coastalaxis.com)
 - `css/style.css` - All styling (colors: navy #1B3A5C, gold #C8962E)
 - `js/main.js` - Mobile menu and navigation behavior
