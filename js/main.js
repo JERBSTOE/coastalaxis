@@ -27,6 +27,35 @@ document.querySelectorAll('.nav a:not(.nav-dropdown > a)').forEach(link => {
   });
 });
 
+// Handle contact form submission via AJAX
+const contactForm = document.querySelector('.contact-form form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        contactForm.innerHTML = '<div style="text-align:center; padding: 2rem 0;"><h3 style="color: var(--navy); margin-bottom: 0.5rem;">Thank You!</h3><p style="color: var(--dark-gray);">Your request has been submitted. Jared will be in touch within one business day.</p></div>';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Submit Request';
+        alert('Something went wrong. Please try again or email jared@coastalaxis.com directly.');
+      }
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Submit Request';
+      alert('Something went wrong. Please try again or email jared@coastalaxis.com directly.');
+    });
+  });
+}
+
 // Set active nav link based on current page
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav a').forEach(link => {
