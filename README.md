@@ -1,6 +1,6 @@
 # How to Update Your Website
 
-Hi Jared! You can make simple text changes to your website directly on GitHub. For anything more complex (layout changes, new pages, design updates, etc.), reach out to Ryan for help.
+Hi Jared! You can make simple text changes to your website directly on GitHub. For anything more complex (layout changes, new pages, design updates, etc.), reach out to Rob for help.
 
 ---
 
@@ -17,7 +17,7 @@ You can edit text directly on GitHub — no coding experience needed.
 
 **Good for:** Changing headings, updating paragraphs, fixing typos, updating your phone number or email.
 
-**Ask Ryan for help with:** Adding new pages, changing the layout or design, updating images, adding new features, or anything you're unsure about.
+**Ask Rob for help with:** Adding new pages, changing the layout or design, updating images, adding new features, or anything you're unsure about.
 
 ---
 
@@ -36,4 +36,4 @@ You can edit text directly on GitHub — no coding experience needed.
 
 ## Need Help?
 
-For anything beyond simple text edits, contact Ryan and he'll take care of it.
+For anything beyond simple text edits, contact Rob and he'll take care of it.
