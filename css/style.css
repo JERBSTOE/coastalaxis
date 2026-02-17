@@ -96,13 +96,13 @@ p { margin-bottom: 1rem; }
 
 /* ---- Header / Nav ---- */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   background: var(--white);
   box-shadow: var(--shadow);
   z-index: 1000;
+  padding: 0.5rem 0;
 }
 
 .header .container {
@@ -112,7 +112,7 @@ p { margin-bottom: 1rem; }
 }
 
 .logo img {
-  height: 250px;
+  height: 80px;
   width: auto;
 }
 
@@ -195,7 +195,6 @@ p { margin-bottom: 1rem; }
 
 /* ---- Hero Section ---- */
 .hero {
-  margin-top: 180px;
   padding: 100px 0 80px;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
@@ -445,7 +444,6 @@ p { margin-bottom: 1rem; }
 
 /* ---- Insurance Detail Page ---- */
 .insurance-hero {
-  margin-top: 180px;
   padding: 60px 0;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
@@ -701,7 +699,6 @@ p { margin-bottom: 1rem; }
 
 /* ---- Page Header (for inner pages) ---- */
 .page-header {
-  margin-top: 180px;
   padding: 60px 0;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
@@ -747,6 +744,8 @@ p { margin-bottom: 1rem; }
   .hero { padding: 60px 0 50px; }
   .hero h1 { font-size: 2.2rem; }
   .section { padding: 50px 0; }
+
+  .logo img { height: 60px; }
 
   .top-bar {
     text-align: center;
